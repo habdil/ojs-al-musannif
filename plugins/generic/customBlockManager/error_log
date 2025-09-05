@@ -1,0 +1,12 @@
+[01-Jun-2024 11:45:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php on line 17
+[30-Jul-2024 00:27:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php on line 17
+[06-Aug-2024 09:53:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/customBlockManager/CustomBlockPlugin.inc.php on line 17

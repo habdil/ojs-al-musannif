@@ -1,0 +1,452 @@
+.article-abstract {
+    text-align: justify;
+    text-justify:inter-word;
+}
+f/*
+* Custom CSS For Al-Musannif
+* Version : 1.0.1
+* 
+*/
+
+/* unvisited link */
+
+
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.kotak-gambar {
+    height: 50px;
+    width: 183px;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px solid #4682b4;
+}
+.kotak-gambar:hover {
+ 	border: 3px dotted #4682b4;
+}
+@media (min-width: 992px)
+.pkp_structure_sidebar {
+    float: right;
+    width: 300px;
+    display: table;
+}
+
+.pkp_block .content p {
+    line-height: 10px;
+    text-align: center;
+}
+.pkp_block .content ul li {
+    line-height: 20px;
+    padding: 0px;
+}
+
+/*Sidebar Link colors*/
+.sidebar-link{
+	color: 	#666666;
+}
+.sidebar-link:hover{
+	color: #007ab2;
+}
+
+/*Sidebar Link's title*/
+.sidebar-link-title{
+    color: #666666;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 10px;
+}
+
+/*Sidebar box*/
+.sidebar-box {
+    background-color: #77b3c129;
+    padding: 10px;
+    border: solid 1px #70b8f59c;
+    border-radius: 6px;
+    background-color: #a6d9e514;
+}
+.sidebar-box-issn{
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ab4242;
+    margin-bottom: 15px;
+    border: solid 1px #dddddd;
+}
+.sidebar-box-white{
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding:10px;	
+	color: #666666;
+	font-size: 11px;
+}
+.sidebar-box-text-desc{
+	line-height: 18px !important;
+	font-size: 11px;
+}
+.sidebar-box-title{
+	text-align: center;
+	font-weight: bold;
+	padding: .5em 1em;
+    margin-bottom: 12px;
+    background: #4682b4;
+    display: block;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+/*Override nav menu from head.less*/
+.has_site_logo .pkp_head_wrapper {
+	width: 100% !important;
+}
+.pkp_block .block_custom {
+	margin-top: -30px !important;
+} 
+.pkp_block a {
+    text-decoration: none;
+    padding: 5px;
+}
+.pkp_block .content ul li {
+    line-height: 20px;
+    padding: 0px;
+}
+/*Footer Link*/
+.jpi-footer-link{
+	color: 	#ffffff !important;
+	font-size: 12px;
+}
+.jpi-footer-link:hover{
+	color: #a4884a !important;
+	font-weight: bold;
+}
+.jpi-footer-text{
+	color: 	#ffffff !important;
+	font-size: 12px;
+}
+
+.btn .btn-default .btn-lg {
+    width: 80%;
+    align-content: center;
+    margin: 10%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/*override header & body*/
+.pkp_head_wrapper .pkp_search .search_controls a {
+	margin-right: 33px;
+}
+.pkp_brand_footer {
+}
+.pkp_site_name > a {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.page_index_journal > .current_issue > h2 {
+	color: #E3B735 !important;
+	margin: 0px;
+
+}
+.pkp_structure_head{
+	background-color: #539cae36;
+}
+.pkp_structure_content{
+    padding-top: 0px;
+    background: rgba(255, 255, 255, 0);
+}
+.pkp_structure_main {
+    background: white;
+    border: solid 1px #70b8f59c;
+    border-radius: 6px;
+}
+.obj_article_details .main_entry {
+    width: 500px;
+}
+.pkp_navigation_user > li > a, .pkp_navigation_user > li.in_focus > a, .pkp_navigation_user > li > a:hover, .pkp_navigation_user > li > a:focus {
+    color: #000;
+    padding: .5em 1em;
+    margin-bottom: 12px;
+    background: #303f4c00;
+    display: block;
+    color: #000;
+    letter-spacing: 0;
+    font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pkp_structure_page{
+	font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+    	font-size: 14px;
+    	line-height: 20px;
+    	color: rgba(0,0,0,0.87);
+    	background: url("https://jurnal.ugm.ac.id/plugins/themes/nusantara2columnsSteelBlue/imgs/noisy_grid.png") repeat fixed;
+}
+.has_site_logo .pkp_head_wrapper {
+    width: 100% !important;
+    background: ##b3d8f300;
+}
+
+.pkp_structure_footer {
+    text-align: center;
+    height: 190px;
+}
+.pkp_structure_head {
+    background-color: #539cae40;
+}
+.cmp_button, .cmp_form .buttons button, .pkp_head_wrapper .pkp_search button, .page_lost_password .buttons button, .page_search .submit button, .obj_article_details .citation_display form input[type="submit"], .block_make_submission a {
+    display: inline-block;
+    padding: 0 1em;
+    background: #eee;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-top-color: #bbb;
+    border-radius: 13px;
+    box-shadow: inset 0 -1em 1em rgba(0,0,0,0.1);
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #007ab2;
+    width: 240px;
+    text-align: center;
+}
+.pkp_block {
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.pkp_page_index pkp_op_index has_site_logo{
+	font-family: "Noto Serif", serif;
+    	font-size: 14px;
+    	line-height: 20px;
+    	color: rgba(0,0,0,0.87);
+    	background: #e41010;
+}
+.pkp_navigation_primary_row{
+	background-color: #4996a987 !important;
+}
+.pkp_footer_content {
+    text-align: left;
+    padding: 0px;
+}
+.pkp_structure_footer_wrapper {
+    background: #539cae40;
+    height: 190px;
+}
+.pkp_brand_footer {
+    max-width: 0px;
+    padding: 0px;
+}
+
+.current_issue > .current_issue_title{
+	padding-top: 10px !important;
+	margin: 0px !important;
+	font-weight: bold !important;
+	color: #007ab2 !important;
+	font-size: 20px !important;
+}
+.obj_issue_toc > .heading > .published{
+	margin-top: 10px !important;
+	color: #666 !important;
+}
+/*articles section*/
+.obj_issue_toc .sections:not(:first-child) {
+	margin-top: 0px;
+}
+
+.obj_article_summary {
+	padding-bottom: 10px !important;
+	border-bottom: solid 1px #ddd !important; 
+}
+
+/*Footer Email Link*/
+.uindesc a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.uindesc a:hover, .uindesc a:focus {
+    color: #dcbd47  !important;
+    text-decoration: none;
+}
+.ui-tabs-panel {
+    position: relative;
+    padding: 32px;
+    background: url(https://jurnal.ugm.ac.id/plugins/themes/nusantara2columnsSteelBlue/imgs/noisy_grid.png) repeat fixed;
+}
+.pkp_controllers_grid .header {
+    position: relative;
+    background: #4996a9ad !important;
+    padding: 0 1em;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.pkp_controllers_grid .header {
+    position: relative;
+    background: #4996a9 !important;
+    padding: 0 1em;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.pkp_controllers_grid thead {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0,0,0,0.54);
+    background: #4996a987 !important;
+}
+.pkp_controllers_grid .scrollable {
+    position: relative;
+    max-height: 150px;
+    overflow: auto;
+    background: #eeeeee;
+}
+element.style {
+    width: 1180px;
+    font-family: Roboto;
+    height: 223px;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.sidemenu {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+.sidemenu li { list-style: none; }
+
+.sidemenu li a {
+    display: table;
+    margin-top: 1px;
+    padding: 4px 10px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
+    vertical-align: middle;
+    color: black;
+    overflow: hidden;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-property: background;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    border: solid 1px #4682b4;
+	border-radius: 6px;
+}
+.sidemenu > li:hover li a:hover {
+    color: #000000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#f9f9f9)); /* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #ffffff, #ffffff); /* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #ffffff, #ffffff); /* IE 10 */
+	background: -ms-linear-gradient(top, #ffffff, #fbfbfb); /* Opera 11.10+ */
+	background: -o-linear-gradient(top, #ffffff, #ffffff);
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  border-radius: 6px;
+}
+
+.sidemenu > li:first-child a { margin-top: 0;}
+
+.sidemenu li a:hover {
+    color: black;
+    background: #ffffff;    
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-out;
+	transition-property: background;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+	border-radius: 6px;
+}
+
+.sidemenu li ul {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.sidemenu li li a {
+    display: block;
+    margin-top: 0;
+    padding: 0px;
+    height: 0;
+    background: #91c7f5;
+    color: #000000;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    border: 0px;
+	border-radius: 6px;
+}
+
+.sidemenu > li:hover li a {
+  display: table;
+  margin-top: 1px;
+  padding: 10px;
+  width: 100%;
+  height: 1em;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  border-radius: 6px;
+}
+
+.sidemenu > li:hover li a:hover {
+    color: #000000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f18f2d), to(#fff9b1)); /* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #f18f2d, #fff9b1); /* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #f18f2d, #fff9b1); /* IE 10 */
+	background: -ms-linear-gradient(top, #f18f2d, #fff9b1); /* Opera 11.10+ */
+	background: -o-linear-gradient(top, #f18f2d, #fff9b1);
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  border-radius: 6px;
+}
+.statistik {
+    height: 197px;
+    width: 210px;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px solid #4682b4;
+}
+.statistik:hover {
+ 	border: 3px dotted #4682b4;
+}
+.obj_announcement_summary .summary {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+    width: 80%;
+}
+.description {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+}

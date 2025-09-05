@@ -1,0 +1,35 @@
+[12-Jun-2024 02:17:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[13-Jun-2024 11:55:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[18-Jun-2024 20:12:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[27-Jun-2024 04:09:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[16-Jul-2024 22:40:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[22-Jul-2024 17:23:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
+[20-Aug-2024 01:02:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function import() in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php:15
+Stack trace:
+#0 /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/index.php(19): require_once()
+#1 {main}
+  thrown in /home/mtsddici/jurnal.mtsddicilellang.sch.id/plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php on line 15
