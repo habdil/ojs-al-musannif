@@ -1,5 +1,5 @@
 <?php return array (
-  'baseColour' => '#085201',
+  'baseColour' => '#008390',
   'enabled' => true,
   'typography' => 'notoSans',
 ); ?>

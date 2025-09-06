@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2025-09-05 07:00:36
+/* Smarty version 3.1.33, created on 2025-09-06 02:43:35
   from 'core:commonheader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_68ba8a94021217_80969983',
+  'unifunc' => 'content_68bb9fd761bfb1_69437562',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '652202841b9a358b5663534995b87eb1fcc7545d' => 
     array (
       0 => 'core:commonheader.tpl',
-      1 => 1551386984,
+      1 => 1757122681,
       2 => 'core',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'core:controllers/notification/notificationOptions.tpl' => 1,
   ),
 ),false)) {
-function content_68ba8a94021217_80969983 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/home/cognifer/ojs.cognifera.web.id/lib/pkp/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
+function content_68bb9fd761bfb1_69437562 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'E:\\Cognifera-Education\\ojs-al-musannif\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['currentLocale']->value,"_","-");?>

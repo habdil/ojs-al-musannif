@@ -1,4 +1,4 @@
 <?php return array (
-  'accentColour' => '#4c8b35',
+  'accentColour' => '#0d9693',
   'enabled' => true,
 ); ?>

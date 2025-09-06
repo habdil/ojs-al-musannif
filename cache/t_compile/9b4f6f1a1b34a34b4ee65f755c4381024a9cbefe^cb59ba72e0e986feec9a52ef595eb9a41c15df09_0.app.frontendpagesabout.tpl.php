@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2025-09-05 07:13:02
+/* Smarty version 3.1.33, created on 2025-09-06 02:45:04
   from 'app:frontendpagesabout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_68ba8d7e0bc731_73275711',
+  'unifunc' => 'content_68bba030d119e5_56166429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb59ba72e0e986feec9a52ef595eb9a41c15df09' => 
     array (
       0 => 'app:frontendpagesabout.tpl',
-      1 => 1551386984,
+      1 => 1757122682,
       2 => 'app',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_68ba8d7e0bc731_73275711 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68bba030d119e5_56166429 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitle'=>"about.aboutContext"), 0, false);
 ?>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2025-09-05 07:13:06
+/* Smarty version 3.1.33, created on 2025-09-06 02:45:24
   from 'app:frontendcomponentssearchF' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_68ba8d8217cd60_16947698',
+  'unifunc' => 'content_68bba04434cea2_17146143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52019e87b90081f2c6bfa717994d81ab7712dd1f' => 
     array (
       0 => 'app:frontendcomponentssearchF',
-      1 => 1551386874,
+      1 => 1757122700,
       2 => 'app',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68ba8d8217cd60_16947698 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68bba04434cea2_17146143 (Smarty_Internal_Template $_smarty_tpl) {
 if (!$_smarty_tpl->tpl_vars['currentJournal']->value || $_smarty_tpl->tpl_vars['currentJournal']->value->getSetting('publishingMode') != @constant('PUBLISHING_MODE_NONE')) {?>
 	<form class="pkp_search" action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('page'=>"search",'op'=>"search"),$_smarty_tpl ) );?>
 " method="post" role="search">

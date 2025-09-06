@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php:*)",
+      "Read(//e/Cognifera-Education/**)",
+      "Bash(mysqldump:*)",
+      "Bash(mysql:*)",
+      "Bash(where mysql)",
+      "Bash(\"C:\\xampp\\mysql\\bin\\mysqldump.exe\" --version)",
+      "Bash(robocopy:*)",
+      "Bash(xcopy:*)",
+      "Bash(dir:*)",
+      "Bash(tar:*)",
+      "Read(//c/php74/**)",
+      "Bash(unzip:*)",
+      "Bash(\"C:\\php74\\php.exe\" -v)",
+      "Bash(tasklist)",
+      "Read(//c/xampp/apache/conf/**)",
+      "Bash(taskkill:*)",
+      "Bash(net stop:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

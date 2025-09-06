@@ -29,7 +29,7 @@
 installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "http://localhost:8000"
+base_url = "https://ojs.cognifera.web.id"
 
 ; Session cookie name
 session_cookie_name = OJSID
@@ -130,8 +130,8 @@ sitewide_privacy_statement = Off
 
 driver = mysqli
 host = localhost
-username = root
-password = 
+username = cognifer_ojs2025
+password = z(yQpN(f3Pr3BV3
 name = cognifer_ojs2025
 ; Set the non-standard port and/or socket, if used
 ; port = 3306
@@ -492,13 +492,13 @@ xslt_command = ""
 ; Display a stack trace when a fatal error occurs.
 ; Note that this may expose private information and should be disabled
 ; for any production system.
-show_stacktrace = On
+show_stacktrace = Off
 
 ; Display an error message when something goes wrong.
-display_errors = On
+display_errors = Off
 
 ; Display deprecation warnings
-deprecation_warnings = On
+deprecation_warnings = Off
 
 ; Log web service request information for debugging
 log_web_service_info = Off
