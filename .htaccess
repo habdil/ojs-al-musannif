@@ -4,7 +4,32 @@
 </FilesMatch>
 # END MultiPHP Version
 
+# OJS Rewrite Rules
+RewriteEngine on
 
+# Handle index.php requests
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
 
+# Disable direct access to templates and includes
+RewriteRule ^templates/.*$ - [R=403,L]
+RewriteRule ^tools/.*$ - [R=403,L]
+RewriteRule ^classes/.*$ - [R=403,L]
+RewriteRule ^lib/.*$ - [R=403,L]
+RewriteRule ^cache/.*$ - [R=403,L]
+RewriteRule ^config\.inc\.php$ - [R=403,L]
 
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "(config\.inc\.php|\.log|\.sql|\.backup)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
 
