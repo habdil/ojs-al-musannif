@@ -1,0 +1,44 @@
+# OJS Cache Files
+cache/
+.cache/
+
+# Temporary files
+nul
+tmp/
+temp/
+
+# Log files
+*.log
+php_errors.log
+
+# Database dumps
+*.sql
+
+# Backup files
+*.backup
+*.bak
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Node modules if any
+node_modules/
+
+# Composer vendor (if using)
+vendor/
+
+# Environment files
+.env
+.env.local
+
+# Files directory (uploads)
+files/
+public/journals/*/images/
+
+# Plugin specific caches
+plugins/*/cache/
