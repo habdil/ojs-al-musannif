@@ -1,0 +1,36 @@
+---
+# cPanel Deployment Configuration
+# Auto-deployment hook for OJS Al-Musannif
+# Generated: 2025-09-06
+
+deployment:
+  # Tasks to run after each git pull/deploy
+  tasks:
+    # Set deployment path (adjust for your cPanel structure)
+    - export DEPLOYPATH=/home/$USER/public_html
+    
+    # Copy production config if first deployment
+    - if [ ! -f $DEPLOYPATH/config.inc.php ]; then cp $DEPLOYPATH/config.inc.php.production $DEPLOYPATH/config.inc.php; fi
+    
+    # Set proper file permissions for OJS
+    - /bin/chmod -R 755 $DEPLOYPATH/cache
+    - /bin/chmod -R 755 $DEPLOYPATH/public  
+    - /bin/chmod -R 755 $DEPLOYPATH/files
+    - /bin/chmod 644 $DEPLOYPATH/config.inc.php
+    - /bin/chmod 644 $DEPLOYPATH/.htaccess
+    
+    # Clear OJS cache for fresh deployment
+    - /bin/rm -rf $DEPLOYPATH/cache/t_compile/*
+    - /bin/rm -rf $DEPLOYPATH/cache/fc-*
+    
+    # Create required directories if they don't exist
+    - /bin/mkdir -p $DEPLOYPATH/files
+    - /bin/mkdir -p $DEPLOYPATH/cache/t_compile
+    
+    # Set ownership (adjust username as needed)
+    - /bin/chown -R $USER:$USER $DEPLOYPATH/cache
+    - /bin/chown -R $USER:$USER $DEPLOYPATH/public
+    - /bin/chown -R $USER:$USER $DEPLOYPATH/files
+    
+    # Optional: Run OJS upgrade script if needed
+    # - /usr/local/bin/php $DEPLOYPATH/tools/upgrade.php upgrade

@@ -1,0 +1,318 @@
+<?php exit(); // DO NOT DELETE ?>
+; DO NOT DELETE THE ABOVE LINE!!!
+; Doing so will expose this configuration file through your web site!
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; config.inc.php - PRODUCTION CONFIGURATION
+;
+; OJS Al-Musannif Production Configuration
+; Generated: 2025-09-06
+; Environment: Production cPanel Hosting
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;
+; General Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[general]
+
+; Set this to On once the system has been installed
+installed = On
+
+; The canonical URL to the OJS installation (UPDATE THIS!)
+base_url = "https://yourdomain.com"
+
+; Session cookie name
+session_cookie_name = OJSID
+
+; Session cookie path; if not specified, defaults to the detected base path
+; session_cookie_path = /
+
+; Number of days to save login cookie for if user selects to remember
+session_lifetime = 30
+
+; Enable support for running scheduled tasks
+scheduled_tasks = On
+
+; Site time zone - SET TO YOUR TIMEZONE
+time_zone = "Asia/Jakarta"
+
+; Date formats
+date_format_trunc = "%m-%d"
+date_format_short = "%Y-%m-%d"
+date_format_long = "%B %e, %Y"
+datetime_format_short = "%Y-%m-%d %I:%M %p"
+datetime_format_long = "%B %e, %Y - %I:%M %p"
+time_format = "%I:%M %p"
+
+; Use URL parameters instead of CGI PATH_INFO
+disable_path_info = Off
+
+; Use fopen(...) for URL-based reads
+allow_url_fopen = Off
+
+; Generate RESTful URLs using mod_rewrite
+restful_urls = On
+
+; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR
+trust_x_forwarded_for = Off
+
+; Allow javascript files to be served through a content delivery network
+enable_cdn = On
+
+; Citation checking max processes
+citation_checking_max_processes = 3
+
+; Display upgrade warning
+show_upgrade_warning = Off
+
+; Enable minified JavaScript
+enable_minified = On
+
+; Provide a unique site ID and OAI base URL to PKP for statistics
+enable_beacon = On
+
+; Site-wide Privacy Statement
+sitewide_privacy_statement = Off
+
+;;;;;;;;;;;;;;;;;;;;;
+; Database Settings ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[database]
+
+driver = mysqli
+host = localhost
+; UPDATE THESE DATABASE CREDENTIALS FOR YOUR CPANEL:
+username = cpanel_user_dbname
+password = your_secure_database_password
+name = cpanel_user_dbname
+; port = 3306
+
+; Enable persistent connections
+persistent = Off
+
+; Enable database debug output (DISABLED FOR PRODUCTION)
+debug = Off
+
+;;;;;;;;;;;;;;;;;;
+; Cache Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[cache]
+
+; Choose the type of object data caching to use
+object_cache = none
+
+; Enable memcache support (if available)
+memcache_hostname = localhost
+memcache_port = 11211
+
+; Web caching for anonymous users (RECOMMENDED FOR PRODUCTION)
+web_cache = On
+web_cache_hours = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localization Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[i18n]
+
+; Default locale
+locale = en_US
+
+; Client output/input character set
+client_charset = utf-8
+
+; Database connection character set
+connection_charset = utf8
+
+; Database storage character set
+database_charset = utf8
+
+;;;;;;;;;;;;;;;;;
+; File Settings ;
+;;;;;;;;;;;;;;;;;
+
+[files]
+
+; Directory to store uploaded files (UPDATE PATH FOR CPANEL)
+files_dir = /home/cpanel_user/ojs_files
+
+; Path to the directory to store public uploaded files
+public_files_dir = public
+
+; Permissions mask for created files and directories
+umask = 0022
+
+; Filename revision match percentage
+filename_revision_match = 70
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fileinfo (MIME) Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[finfo]
+; mime_database_path = /etc/magic.mime
+
+;;;;;;;;;;;;;;;;;;;;;
+; Security Settings ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[security]
+
+; Force SSL connections site-wide (ENABLE FOR PRODUCTION)
+force_ssl = On
+
+; Force SSL connections for login only
+force_login_ssl = On
+
+; Session IP check (DISABLED for proxy compatibility)
+session_check_ip = Off
+
+; Encryption algorithm
+encryption = sha1
+
+; IMPORTANT: Change this to a unique random string!
+salt = "CHANGE_THIS_TO_RANDOM_32_CHAR_STRING"
+
+; The unique secret used for encoding and decoding API keys
+api_key_secret = "CHANGE_THIS_TO_RANDOM_API_SECRET"
+
+; Password reset hash expiration (2 hours)
+reset_seconds = 7200
+
+; Allowed HTML tags for restricted HTML fields
+allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
+
+;;;;;;;;;;;;;;;;;;
+; Email Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[email]
+
+; Use SMTP for sending mail
+smtp = On
+
+; SMTP server settings (UPDATE FOR YOUR EMAIL PROVIDER)
+smtp_server = "mail.yourdomain.com"
+smtp_port = 587
+
+; Enable SMTP authentication (UPDATE CREDENTIALS)
+smtp_auth = tls
+smtp_username = "noreply@yourdomain.com"
+smtp_password = "your_email_password"
+
+; Allow envelope sender to be specified
+allow_envelope_sender = On
+
+; Default envelope sender
+default_envelope_sender = noreply@yourdomain.com
+
+; Time between emails (prevent spam)
+time_between_emails = 3600
+
+; Maximum number of recipients
+max_recipients = 10
+
+; Require email validation
+require_validation = On
+
+; Validation timeout (14 days)
+validation_timeout = 14
+
+;;;;;;;;;;;;;;;;;;;
+; Search Settings ;
+;;;;;;;;;;;;;;;;;;;
+
+[search]
+
+; Minimum indexed word length
+min_word_length = 3
+
+; Search results per keyword
+results_per_keyword = 500
+
+; Result cache hours
+result_cache_hours = 1
+
+;;;;;;;;;;;;;;;;
+; OAI Settings ;
+;;;;;;;;;;;;;;;;
+
+[oai]
+
+; Enable OAI front-end
+oai = On
+
+; OAI Repository identifier (UPDATE THIS)
+repository_id = "ojs2.yourdomain.com"
+
+; Maximum records per request
+oai_max_records = 100
+
+;;;;;;;;;;;;;;;;;;;;;;
+; Interface Settings ;
+;;;;;;;;;;;;;;;;;;;;;;
+
+[interface]
+
+; Items per page
+items_per_page = 25
+
+; Page links to display
+page_links = 10
+
+;;;;;;;;;;;;;;;;;;;;
+; Captcha Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[captcha]
+
+; Enable ReCaptcha (RECOMMENDED FOR PRODUCTION)
+recaptcha = on
+
+; reCaptcha keys (GET FROM GOOGLE RECAPTCHA)
+recaptcha_public_key = your_recaptcha_public_key
+recaptcha_private_key = your_recaptcha_private_key
+
+; Use Captcha on registration
+captcha_on_register = on
+
+;;;;;;;;;;;;;;;;;;;;;
+; External Commands ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[cli]
+
+; External binaries (UPDATE PATHS FOR YOUR SERVER)
+perl = /usr/bin/perl
+tar = /bin/tar
+xslt_command = ""
+
+;;;;;;;;;;;;;;;;;;
+; Proxy Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[proxy]
+; Proxy settings (if needed)
+; http_host = localhost
+; http_port = 80
+
+;;;;;;;;;;;;;;;;;;
+; Debug Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[debug]
+
+; PRODUCTION SETTINGS - SECURITY FOCUSED
+show_stacktrace = Off
+display_errors = Off
+deprecation_warnings = Off
+log_web_service_info = Off
+
+; NOTE: All debug options are DISABLED for production security.
+; Enable only for troubleshooting, then disable again.

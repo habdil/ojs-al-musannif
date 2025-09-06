@@ -1,0 +1,104 @@
+name: Deploy OJS to cPanel
+
+# Trigger deployment on push to main branch
+on:
+  push:
+    branches: [ main ]
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Production cPanel
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🚀 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 📋 Prepare deployment files
+      run: |
+        # Remove development files
+        rm -rf .git/ .github/ .claude/ 
+        rm -f BUG_REPORT.md ROLLBACK_PROCEDURE.md
+        
+        # Clear cache files
+        rm -rf cache/t_compile/*
+        rm -f cache/fc-*
+        
+        # Create production directories
+        mkdir -p cache/t_compile
+        mkdir -p files
+        
+        # Set executable permissions for scripts
+        find . -name "*.php" -type f -exec chmod 644 {} \;
+        find . -type d -exec chmod 755 {} \;
+
+    - name: 🔧 Deploy to cPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        # FTP server details (set in GitHub Secrets)
+        server: ${{ secrets.CPANEL_FTP_SERVER }}
+        username: ${{ secrets.CPANEL_FTP_USERNAME }}
+        password: ${{ secrets.CPANEL_FTP_PASSWORD }}
+        
+        # Deployment settings
+        protocol: ftps
+        port: 21
+        local-dir: ./
+        server-dir: ./public_html/
+        
+        # Exclude files from deployment
+        exclude: |
+          **/.git*
+          **/.github*
+          **/.claude*
+          **/BUG_REPORT.md
+          **/ROLLBACK_PROCEDURE.md
+          **/cache/t_compile/*
+          **/cache/fc-*
+          **/nul
+          **/*.log
+          **/*.backup
+          **/.DS_Store
+          **/Thumbs.db
+          
+        # Force upload and delete orphaned files
+        dangerous-clean-slate: false
+        dry-run: false
+
+    - name: 📝 Post-deployment cleanup
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        # SSH connection details (set in GitHub Secrets)
+        host: ${{ secrets.CPANEL_SSH_HOST }}
+        username: ${{ secrets.CPANEL_SSH_USERNAME }}
+        password: ${{ secrets.CPANEL_SSH_PASSWORD }}
+        port: ${{ secrets.CPANEL_SSH_PORT }}
+        
+        # Post-deployment commands
+        script: |
+          # Navigate to deployment directory
+          cd public_html/
+          
+          # Set proper file permissions
+          chmod -R 755 cache/ public/ files/
+          chmod 644 config.inc.php .htaccess
+          
+          # Clear OJS cache
+          rm -rf cache/t_compile/*
+          rm -f cache/fc-*
+          
+          # Create required directories
+          mkdir -p files cache/t_compile
+          
+          # Optional: Run OJS upgrade if needed
+          # php tools/upgrade.php upgrade
+
+    - name: ✅ Deployment notification
+      run: |
+        echo "🎉 OJS Al-Musannif deployed successfully to production!"
+        echo "📅 Deployment time: $(date)"
+        echo "📋 Files deployed from commit: ${{ github.sha }}"
