@@ -106,7 +106,10 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		} else {
 			// Return the first issue if multiple exist (avoid assert failure)
 			if (count($issues) > 1) {
-				error_log("Warning: Multiple issues found with pub-id '$pubId' of type '$pubIdType'");
+				// Only log warning for non-empty pub-ids to reduce log spam
+				if (!empty($pubId)) {
+					error_log("Warning: Multiple issues found with pub-id '$pubId' of type '$pubIdType'");
+				}
 			}
 			return $issues[0];
 		}

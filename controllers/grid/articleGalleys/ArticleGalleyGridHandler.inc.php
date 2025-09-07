@@ -384,7 +384,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::fetchRow()
 	 */
-	function fetchRow($args, $request) {
+	function fetchRow(&$args, $request) {
 		$json = parent::fetchRow($args, $request);
 		if ($row = $this->getRequestedRow($request, $args)) {
 			$galley = $row->getData();
