@@ -39,8 +39,9 @@ class JournalOAI extends OAI {
 	function __construct($config) {
 		parent::__construct($config);
 
-		$this->site = Request::getSite();
-		$this->journal = Request::getJournal();
+		$request = Application::getRequest();
+		$this->site = $request->getSite();
+		$this->journal = $request->getJournal();
 		$this->journalId = isset($this->journal) ? $this->journal->getId() : null;
 		$this->dao = DAORegistry::getDAO('OAIDAO');
 		$this->dao->setOAI($this);
@@ -199,7 +200,8 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::sets()
 	 */
-	function sets($offset, $limit, &$total) {
+	function sets($offset, &$total) {
+		$limit = null; // Use default limit from DAO
 		$sets = null;
 		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, $total, &$sets))) {
 			$sets = $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);

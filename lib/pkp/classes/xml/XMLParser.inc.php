@@ -41,9 +41,8 @@ class XMLParser {
 	 * Initialize parser and set parser options.
 	 */
 	function __construct() {
-		// magic_quotes_runtime must be disabled for XML parsing
-		$this->magicQuotes = get_magic_quotes_runtime();
-		if ($this->magicQuotes) set_magic_quotes_runtime(0);
+		// magic_quotes_runtime is no longer supported in modern PHP
+		$this->magicQuotes = false;
 		$this->errors = array();
 	}
 
@@ -246,8 +245,7 @@ class XMLParser {
 	 * Perform required clean up for this object.
 	 */
 	function destroy() {
-		// Set magic_quotes_runtime back to original setting
-		if ($this->magicQuotes) set_magic_quotes_runtime($this->magicQuotes);
+		// magic_quotes_runtime is no longer supported in modern PHP
 	}
 
 }
