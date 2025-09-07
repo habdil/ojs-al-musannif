@@ -62,7 +62,7 @@ class GenreForm extends Form {
 	 * Initialize form data from current settings.
 	 * @param $args array
 	 */
-	function initData($args) {
+	function initData($args = array()) {
 		$request = Application::getRequest();
 		$context = $request->getContext();
 

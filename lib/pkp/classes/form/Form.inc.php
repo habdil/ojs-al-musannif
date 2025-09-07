@@ -374,7 +374,7 @@ class Form {
 		// case.
 		HookRegistry::call(strtolower_codesafe(get_class($this) . '::readUserVars'), array($this, &$vars));
 		foreach ($vars as $k) {
-			$this->setData($k, Request::getUserVar($k));
+			$this->setData($k, Application::getRequest()->getUserVar($k));
 		}
 	}
 

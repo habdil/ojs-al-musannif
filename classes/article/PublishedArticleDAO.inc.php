@@ -528,10 +528,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function _fromRow($row, $callHooks = true) {
 		$publishedArticle = parent::_fromRow($row);
-		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
-		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setSequence($row['seq']);
-		$publishedArticle->setAccessStatus($row['access_status']);
+		$publishedArticle->setPublishedArticleId(isset($row['published_submission_id']) ? $row['published_submission_id'] : null);
+		$publishedArticle->setIssueId(isset($row['issue_id']) ? $row['issue_id'] : null);
+		$publishedArticle->setSequence(isset($row['seq']) ? $row['seq'] : 0);
+		$publishedArticle->setAccessStatus(isset($row['access_status']) ? $row['access_status'] : 0);
 
 		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'])->toArray());
 
