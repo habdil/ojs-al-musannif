@@ -69,7 +69,9 @@ class ManageSubmissionFilesForm extends Form {
 	 * that is currently being used by a grid inside this form.
 	 * @param $fileStage int SUBMISSION_FILE_...
 	 */
-	function execute($stageSubmissionFiles, $fileStage = null) {
+	function execute() {
+		$stageSubmissionFiles = func_num_args() > 0 ? func_get_arg(0) : null;
+		$fileStage = func_num_args() > 1 ? func_get_arg(1) : null;
 		$selectedFiles = (array)$this->getData('selectedFiles');
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getLatestRevisions($this->getSubmissionId());

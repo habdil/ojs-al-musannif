@@ -95,7 +95,7 @@ class QuickSubmitForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager($this->request);
 
 		$templateMgr->assign(
@@ -174,7 +174,7 @@ class QuickSubmitForm extends Form {
 	 * Perform additional validation checks
 	 * @copydoc Form::validate
 	 */
-	function validate() {
+	function validate($callHooks = true) {
 		if (!parent::validate()) return false;
 
 		// Validate Issue if Published is selected
@@ -223,7 +223,8 @@ class QuickSubmitForm extends Form {
 			$this->_metadataFormImplem->initData($submission);
 
 			// Add the user manager group (first that is found) to the stage_assignment for that submission
-			$user = Request::getUser();
+			$request = Application::getRequest();
+			$user = $request->getUser();
 
 			$userGroupAssignmentDao = DAORegistry::getDAO('UserGroupAssignmentDAO');
 			$userGroupDao = DAORegistry::getDAO('UserGroupDAO');

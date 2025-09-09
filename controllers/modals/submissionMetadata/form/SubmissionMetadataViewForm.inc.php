@@ -32,7 +32,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	 * @param $request PKPRequest
 	 * return string
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$submission = $this->getSubmission();
 		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);

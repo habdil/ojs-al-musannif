@@ -33,7 +33,7 @@ class SubmissionSubjectEntryDAO extends ControlledVocabEntryDAO {
 	 * @param $controlledVocabId int
 	 * @return object DAOResultFactory containing matching CVE objects
 	 */
-	function getByControlledVocabId($controlledVocabId, $rangeInfo = null) {
+	function getByControlledVocabId($controlledVocabId, $rangeInfo = null, $filter = null) {
 		$result = $this->retrieveRange(
 			'SELECT cve.* FROM controlled_vocab_entries cve WHERE cve.controlled_vocab_id = ? ORDER BY seq',
 			array((int) $controlledVocabId),
